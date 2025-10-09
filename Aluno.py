@@ -10,18 +10,19 @@ class Aluno:
     def imprimir_notas(self,nota1,nota2,nota3,nota4):
         print(f'NOta 1: {nota1}\n ,Nota 2: {nota2}\n ,Nota3: {nota3}\n ,Nota4: {nota4}')
 
-    def calcular_media(self,ra,nota1,nota2,nota3,nota4):
-        ra = nota1 + nota2 + nota3 + nota4 / 4 
-        print(f'A Media Aritmetica é: {ra}') 
-    def mostrar_situacao(self,ra):
-        if ra >= 7:
+    def calcular_media(self):
+        media = (self.nota1 + self.nota2 + self.nota3 + self.nota4) / 4 
+        print(f'A Media Aritmetica é: {media:.2f}')
+        return media 
+    def mostrar_situacao(self):
+        media = self.calcular_media()
+        if media >= 7:
             print("O Aluno esta Aprovado")
-        elif ra <= 5 and ra >= 6.9:
+        elif media  >= 5:
             print("O aluno esta de Exame")
         else:
             print("O aluno esta Reprovado")
 
-            return True
 
 aluno1 = Aluno("Ulrich",123456,8,5,6,8)
 
