@@ -123,30 +123,30 @@ class Agedamento:
         print(f"Pagamento vinculado ao agendamento {self.codigo}.") 
 
 
-####### if __name__ == "__main__":
-    # Criar cliente
-#    cliente1 = Cliente("Ana Silva", "12345678900", "99999-9999", "ana@email.com", "Rua A, 100")
-#    cliente1.cadastrar()
-
-    # Criar profissional
-#    prof1 = Profissional("Marcos Oliveira", "Esteticista", "CRP1234", "98888-8888")
-#    prof1.add_horario("14:00")
-#    prof1.add_horario("15:00")
-
-    # Criar serviço
-#    serv1 = Servico(1, "Limpeza de Pele", "Limpeza profunda da pele", 60, 120.0)
-
-    # Criar agendamento
-#    ag1 = Agendamento(101, "2025-10-25", "14:00", cliente1, prof1, serv1)
-#    ag1.criarAgenda()
-#    ag1.confirmar()
-
-    # Criar pagamento
-#   pag1 = Pagamento(1, serv1.preco, "Cartão de Crédito")
-#    pag1.processarPagamento()
-#    ag1.adicionarPagamento(pag1)
-
-    # Visualizar agenda do cliente
-#    cliente1.visualizar_agenda()
+    if __name__ == "__main__":
+        # Criar cliente
+        cliente1 = Cliente("Ana Silva", "12345678900", "99999-9999", "ana@email.com", "Rua A, 100")
+        cliente1.cadastrar()
+    
+        # Criar profissional
+        prof1 = Profissional("Marcos Oliveira", "Esteticista", "CRP1234", "98888-8888")
+        prof1.add_horario("14:00")
+        prof1.add_horario("15:00")
+    
+        # Criar serviço
+        serv1 = Servico(1, "Limpeza de Pele", "Limpeza profunda da pele", 60, 120.0)
+    
+        # Criar agendamento
+        ag1 = Agendamento(101, "2025-10-25", "14:00", cliente1, prof1, serv1)
+        ag1.criarAgenda()
+        ag1.confirmar()
+    
+        # Criar pagamento
+        pag1 = Pagamento(1, serv1.preco, "Cartão de Crédito")
+        pag1.processarPagamento()
+        ag1.adicionarPagamento(pag1)
+    
+        # Visualizar agenda do cliente
+        cliente1.visualizar_agenda()
 
     
