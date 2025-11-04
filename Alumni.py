@@ -6,20 +6,19 @@ class Alumni:
         self.nota2 = nota2
         self.nota3 = nota3
 
-    def exibir_nome(self,nome):
-        self.nome = nome 
-        return nome
+    def exibir_nome(self):
+        return self.nome
     
     def calcular_media(self):        
         media = (self.nota1 + self.nota2 + self.nota3)/3
         return media
    
-    def situacao(self,media):
+    def situacao(self):
         media = self.calcular_media()
         if media >= 6:
-            print(f'O aluno {self.nome} está aprovado')
+            return "Aprovado"
         else:
-            print(f'O aluno {self.nome} esta reprovado')
+            return "Reprovado"
 
 class Gerenciar_alunos:   
     def __init__(self):
@@ -54,14 +53,14 @@ def main():
         nota3 = float(input("Nota 3: "))
 
         aluno = Alumni(matricula, nome, nota1, nota2, nota3)
-        sistema.adicionar_aluno(aluno)
+        sistema.adicionar_alunos(aluno)
 
     print("\n=== Lista de Alunos ===")
     sistema.listar_alunos()
 
     print("\n=== Estatísticas ===")
-    sistema.maior_media()
-    sistema.menor_media()
+    sistema.nota_max()
+    sistema.nota_min()
 
 
 # Executar programa
